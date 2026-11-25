@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-fact-decay-index"
+version = "0.1.0"
+description = "Stores agent-observed facts with exponential confidence half-lives and recency/trust contradiction resolution"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+temporal-fact-decay-index = "temporal_fact_decay_index.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["temporal_fact_decay_index*"]
